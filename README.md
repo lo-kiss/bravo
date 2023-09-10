@@ -7,4 +7,4 @@
   he's actually very stubborn, but I still love him
 </blockquote>
 
-This repo contains my persoanl NixOS configuration (flake based). It's still work in progress and I plan to make it modular.
+This repo contains my personal NixOS configuration (flake based). It's still work in progress and I plan to make it modular.
