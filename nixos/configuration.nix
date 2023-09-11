@@ -112,6 +112,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # terminal
+    wget
     curl
     git
     fish
