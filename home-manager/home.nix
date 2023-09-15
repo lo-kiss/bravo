@@ -1,5 +1,9 @@
 { inputs, lib, config, pkgs, ...}:
 {
+  imports = [
+    ../modules/editors/helix/default.nix
+  ];
+
   home.username = "loki";
   home.homeDirectory = "/home/loki";
 
@@ -14,18 +18,10 @@
     ( nerdfonts.override { fonts = [ "Iosevka" ]; })
     gnomeExtensions.rounded-window-corners
     gnomeExtensions.just-perfection
-    gnomeExtensions.blur-my-shell
     gnomeExtensions.pano
-    gnomeExtensions.pop-shell
     gnomeExtensions.advanced-alttab-window-switcher
     gnomeExtensions.gsconnect
-
-    # lang servers
-    lua-language-server
-    vscode-langservers-extracted
-    marksman # for markdown
-    nil # for nix
-    # libclang # for C/C++
+    gnomeExtensions.burn-my-windows
   ];
 
   programs.git = {
@@ -61,45 +57,6 @@
       "--group-directories-first"
       "--no-user"
     ];
-  };
-
-  programs.helix = {
-    enable = true;
-    defaultEditor = true;
-
-    settings = {
-      theme = "onedark";
-      editor = {
-        auto-format = false;
-        line-number = "relative";
-        bufferline = "multiple";
-        color-modes = true;
-        cursor-shape = {
-          insert = "bar";
-          normal = "block";
-          select = "underline";
-        };
-
-        whitespace.render.tab = "all";
-        indent-guides = {
-          render = true;
-          character = "▏";
-          skip-levels = 1;
-        };
-
-        lsp = {
-          display-messages = true;
-          display-inlay-hints = true;
-        };
-      };
-
-      keys.normal = {
-        C-s = ":w";
-      };
-      keys.insert = {
-        j.j = "normal_mode";
-      };
-    };
   };
 
   # programs.kitty = {
