@@ -6,7 +6,7 @@
     cat = "bat";
     mv = "mv -i";
     cp = "cp -i";
-    rm = "rm -i";
+    rm = "rm -I";
     mkdir = "mkdir -p";
     ls-gen = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
   };

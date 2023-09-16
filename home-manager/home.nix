@@ -4,23 +4,20 @@
     ../modules/editors/helix/default.nix
     ../modules/shell/default.nix
     ../modules/shell/fish/default.nix
+    ../modules/desktop/gnome/default.nix
   ];
 
   home.username = "loki";
   home.homeDirectory = "/home/loki";
 
   home.packages = with pkgs; [
-    bibata-cursors
-    fragments
-    metadata-cleaner
     prismlauncher
-    ( nerdfonts.override { fonts = [ "Iosevka" ]; })
-    gnomeExtensions.rounded-window-corners
-    gnomeExtensions.just-perfection
-    gnomeExtensions.pano
-    gnomeExtensions.advanced-alttab-window-switcher
-    gnomeExtensions.gsconnect
-    gnomeExtensions.burn-my-windows
+    ( nerdfonts.override { 
+      fonts = [ 
+        "Iosevka"
+        "IosevkaTerm"
+       ]; 
+    })
   ];
 
   programs.git = {

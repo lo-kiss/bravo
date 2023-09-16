@@ -125,16 +125,6 @@
     blender
     godot_4
     # pixelorama
-    blackbox-terminal
-
-    # gnome
-    curtail
-    celluloid
-    newsflash
-    gnome-obfuscate
-    video-trimmer
-    gnome.gnome-tweaks
-    amberol
   ];
 
   programs.fish.enable = true;
