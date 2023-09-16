@@ -2,15 +2,14 @@
 {
   imports = [
     ../modules/editors/helix/default.nix
+    ../modules/shell/default.nix
+    ../modules/shell/fish/default.nix
   ];
 
   home.username = "loki";
   home.homeDirectory = "/home/loki";
 
   home.packages = with pkgs; [
-    bat
-    tldr
-    neofetch
     bibata-cursors
     fragments
     metadata-cleaner
@@ -32,32 +31,6 @@
   };
 
   programs.gitui.enable = true;
-
-  # Applies to all shells (aliases should have contents that work on all shells)
-  home.shellAliases = {
-    "..." = "cd ../..";
-    cat = "bat";
-    ls-gen = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
-  };
-
-  programs.fish = {
-    enable = true;
-    # shellAliases = { };
-    shellAbbrs = {
-      cl = "clear";
-    };
-  };
-
-  programs.eza = {
-    enable = true;
-    enableAliases = true;
-    git = true;
-    icons = true;
-    extraOptions = [
-      "--group-directories-first"
-      "--no-user"
-    ];
-  };
 
   # programs.kitty = {
   #   enable = true;
