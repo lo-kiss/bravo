@@ -1,3 +1,4 @@
+{ pkgs, ...}:
 {
   programs.fish = {
     enable = true;
@@ -6,5 +7,9 @@
       cl = "clear";
     };
   };
+
+  home.packages = with pkgs; [
+    fishPlugins.autopair
+  ];
 }
 

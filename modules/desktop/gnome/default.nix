@@ -1,6 +1,6 @@
 { pkgs, ...}:
 {
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     bibata-cursors
     fragments
     metadata-cleaner
@@ -12,12 +12,15 @@
     video-trimmer
     gnome.gnome-tweaks
     amberol
-  
-    gnomeExtensions.rounded-window-corners
-    gnomeExtensions.just-perfection
-    gnomeExtensions.pano
-    gnomeExtensions.advanced-alttab-window-switcher
-    gnomeExtensions.gsconnect
-    gnomeExtensions.burn-my-windows
-  ];
+    mission-center
+    cartridges
+    eyedropper
+    mousai
+    livecaptions
+  ]) ++ (with pkgs.gnomeExtensions; [
+    rounded-window-corners
+    pano
+    gsconnect
+    burn-my-windows
+  ]);
 }

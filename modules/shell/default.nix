@@ -26,6 +26,7 @@
     bat
     tldr
     neofetch
+    trashy
   ];
 }
 

@@ -108,8 +108,18 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-console # alternative: blackbox
+    gnome-photos # alternative: the default image viewer or opening the file manager
+    gnome-tour
+    # gnome-text-editor
+  ]) ++ (with pkgs.gnome; [
+    epiphany # gnome web - install from flatpak
+    gnome-system-monitor # alternative: mission center
+    totem # alternative: celluloid
+    gnome-music # alternative: amberol
+  ]);
+
   environment.systemPackages = with pkgs; [
     # terminal
     wget
