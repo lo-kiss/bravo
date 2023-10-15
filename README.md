@@ -3,8 +3,9 @@
 
 <blockquote>
   <h1>bravo</h1>
-  dog that is so loyal that his name is a praise<br>
-  he's actually very stubborn, but I still love him
+  dog so loyal that his name is a praise.<br>
+  he's actually very stubborn, but I still love him.
 </blockquote>
 
-This repo contains my personal NixOS configuration (flake based). It's still work in progress and I plan to make it modular.
+This repo contains my personal NixOS flake configuration.
+
