@@ -13,7 +13,9 @@
   home.packages = with pkgs; [
     prismlauncher
     celestia
+  ];
 
+  fonts.fonts = with pkgs; [
     ( nerdfonts.override { 
       fonts = [ 
         "Iosevka"
@@ -21,6 +23,9 @@
        ]; 
     })
   ];
+
+  fonts.fontconfig.defaultFonts.sansSerif = ["Cantarell Regular"];
+  fonts.fontconfig.defaultFonts.monospace = ["IosevkaTerm Nerd Font Mono SemiBold"];
 
   programs.git = {
     enable = true;

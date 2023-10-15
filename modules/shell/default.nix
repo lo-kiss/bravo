@@ -27,6 +27,10 @@
     tldr
     neofetch
     trashy
+    gh
+    ripgrep
+    fd
+    curl
   ];
 }
 

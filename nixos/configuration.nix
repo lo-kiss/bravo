@@ -100,9 +100,6 @@
     isNormalUser = true;
     description = "loki";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      gh
-    ];
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -121,10 +118,7 @@
 
   environment.systemPackages = with pkgs; [
     # terminal
-    wget
-    curl
     git
-    fish
 
     # gui
     # librewolf # install from flatpak
