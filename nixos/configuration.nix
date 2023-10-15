@@ -2,6 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../modules/security/default.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
@@ -130,7 +131,7 @@
     # pixelorama
   ];
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     ( nerdfonts.override { 
       fonts = [ 
         "Iosevka"
