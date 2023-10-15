@@ -130,6 +130,18 @@
     # pixelorama
   ];
 
+  fonts.fonts = with pkgs; [
+    ( nerdfonts.override { 
+      fonts = [ 
+        "Iosevka"
+        "IosevkaTerm"
+       ]; 
+    })
+  ];
+
+  fonts.fontconfig.defaultFonts.sansSerif = ["Cantarell Regular"];
+  fonts.fontconfig.defaultFonts.monospace = ["IosevkaTerm Nerd Font Mono SemiBold"];
+
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
   environment.shells = with pkgs; [ fish ];
