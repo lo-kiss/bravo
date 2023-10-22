@@ -41,6 +41,8 @@
     systemd-boot.memtest86.enable = true;
   };
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   networking = {
     hostName = "nixussy";
     networkmanager.enable = true;
