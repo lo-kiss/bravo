@@ -3,6 +3,7 @@
   home.packages = (with pkgs; [
     bibata-cursors
     fragments
+    fractal
     metadata-cleaner
     blackbox-terminal
     curtail
@@ -12,15 +13,13 @@
     video-trimmer
     gnome.gnome-tweaks
     amberol
-    mission-center
     cartridges
     eyedropper
     mousai
     livecaptions
+    impression
   ]) ++ (with pkgs.gnomeExtensions; [
     rounded-window-corners
-    pano
     gsconnect
-    burn-my-windows
   ]);
 }

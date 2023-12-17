@@ -5,6 +5,7 @@
     ../modules/shell/default.nix
     ../modules/shell/fish/default.nix
     ../modules/desktop/gnome/default.nix
+    ../modules/creative/default.nix
   ];
 
   home.username = "loki";

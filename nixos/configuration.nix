@@ -74,6 +74,8 @@
     enable = true;
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
+    wacom.enable = true;
+    digimend.enable = true;
     # Configure keymap in X11
     layout = "us";
     xkbVariant = "";
@@ -120,17 +122,8 @@
   ]);
 
   environment.systemPackages = with pkgs; [
-    # terminal
     git
-
-    # gui
-    # librewolf # install from flatpak
-    # inkscape # Out of date, won't be updated until 1.3.1. Installed from flatpak in the mean time
     minetest
-    krita
-    blender
-    godot_4
-    # pixelorama
   ];
 
   fonts.packages = with pkgs; [
